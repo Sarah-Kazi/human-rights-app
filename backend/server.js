@@ -96,7 +96,7 @@ app.post('/api/emergency', async (req, res) => {
     await client.messages.create({
       body: `🚨 EMERGENCY! Location: ${googleMapsLink}`,
       from: process.env.TWILIO_PHONE_NUMBER,
-      to: '+918369282400' // Verified number (replace with yours)
+      to: 'replace with your number' // Verified number (replace with yours)
     });
 
     res.status(200).json({ success: true });
