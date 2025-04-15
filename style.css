@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><path d="M50 20L20 50l30 30 30-30z" fill="%231e90ff"/></svg>');
+  background-repeat: repeat;
+  
+  
+  }
+  
+  
+  header {
+    background-color: #1e90ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .info {
+    margin: 20px;
+  }
+  
+  .card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  button {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+/* Make the list scrollable */
+.rights-list {
+    max-height: 95px; /* Set max height */
+    cursor: pointer; /* 👆 Hand cursor on hover! */
+    overflow-y: auto;   /* Add scrollbar when needed */
+    padding-left: 0;
+    list-style: none;
+    padding-right: 10px; /* Space for scrollbar */
+  }
+  .rights-list li:hover {
+    background-color: #e3f2fd;
+    transform: translateX(5px); /* ✨ Magic hover slide */
+  }
+  
+  /* Fancy scrollbar (optional) */
+  .rights-list::-webkit-scrollbar {
+    width: 8px;
+  }
+  #sosButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: red;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .rights-list::-webkit-scrollbar-thumb {
+    background-color: #1e90ff; /* Blue scrollbar */
+    border-radius: 4px;
+  }
+  
+  .rights-list::-webkit-scrollbar-track {
+    background-color: #f0f8ff; /* Light blue track */
+  }
+  /* Dashboard */
+.dashboard {
+  padding: 20px;
+  background: #f8f9fa;
+  
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Stat Cards */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.stat-card p {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+/* Charts Grid */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.chart-container {
+  background: white;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Add to style.css */
+.chart-container canvas {
+  width: 70% !important;
+  height: 400px !important;
+}
+.stat-card p {
+  font-size: 2.5em;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.stat-card p.update {
+  transform: scale(1.1);
+}
+
+/* Main container for columns */
+.main-container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Column styling */
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
+
+/* Existing card styling */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}

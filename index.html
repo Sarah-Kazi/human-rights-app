@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Human Rights Helper 👧🇮🇳</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Know Your Rights in India! ✊</h1>
+    <p>Learn and protect yourself!</p>
+  </header>
+
+  <!-- Info Section -->
+  <section class="info">
+    <h2>Your Basic Rights in India 🇮🇳</h2>
+    <div class="card">
+      <ul class="rights-list">
+        <!-- Add these list items -->
+        <li>⚖ <strong>Right to Equality</strong>: No discrimination based on religion, race, or gender.</li>
+        <li>🗽 <strong>Right to Freedom</strong>: Speak freely, protest peacefully, and choose your work.</li>
+        <li>🚫 <strong>Right Against Exploitation</strong>: No forced labor or child labor.</li>
+        <li>🕌 <strong>Right to Freedom of Religion</strong>: Practice any religion you like.</li>
+        <li>🎓 <strong>Right to Education</strong>: Free education for kids aged 6-14 years.</li>
+        <li>⚖ <strong>Right to Constitutional Remedies</strong>: Go to court if your rights are violated.</li>
+        <li>👩⚖ <strong>Right to Privacy</strong>: No one can spy on you or your messages.</li>
+        <li>🍲 <strong>Right to Food</strong>: No one should starve (government gives food subsidies).</li>
+        <li>🌳 <strong>Right to a Clean Environment</strong>: Clean air and water for everyone.</li>
+<li>🏥 <strong>Right to Healthcare</strong>: Hospitals must help in emergencies.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Button to Check Rights Violation -->
+  <button onclick="checkRights()">Register your complaint</button>
+  <!-- Add this to your HTML body -->
+<button id="sosButton" onclick="sendEmergency()">🚨 Emergency SOS</button>
+
+  <!-- Complaint Form (hidden at first) -->
+  <div id="complaintForm" style="display: none;">
+    <h3>Report a Violation</h3>
+    <input type="text" placeholder="Your Name" id="name">
+    <input type="email" placeholder="Your Email" id="email">
+    <textarea placeholder="What happened?" id="complaint"></textarea>
+    <button onclick="submitComplaint()">Send Complaint to Authorities</button>
+  </div>
+
+  <!-- Link JavaScript -->
+  <script src="script.js"></script>
+  <section class="contacts">
+    <h2>Important Contacts 📞</h2>
+    <div class="card">
+      <p>National Human Rights Commission (NHRC): <strong>+91-11-24651330</strong></p>
+      <p>Police: <strong>100</strong></p>
+      <p>Email: <strong>covdnhrc@nic.in</strong></p>
+    </div>
+    <!-- Chat Button -->
+<button onclick="toggleChat()">Ask AI Rights Helper 🤖</button>
+
+<!-- Chat Container (hidden by default) -->
+<div id="chatContainer" style="display: none; position: fixed; bottom: 20px; right: 20px; background: white; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <div id="chatMessages"></div>
+  <input type="text" id="userInput" placeholder="Describe your issue...">
+  <button onclick="sendToAI()">Ask</button>
+  <button onclick="toggleChat()">Close</button>
+</div>
+<div class="counter">
+  🚨 <span id="counter">0</span> emergencies reported!
+</div>
+
+<script>
+  // Fake counter (updates every 5 seconds)
+  setInterval(() => {
+    document.getElementById('counter').textContent = 
+      parseInt(document.getElementById('counter').textContent) + 1;
+  }, 5000);
+</script>
+<div id="confirmationScreen" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #1e90ff; color: white; padding: 20px; border-radius: 10px;">
+  Alert sent! 🚑 Help is on the way!
+</div>
+<section class="dashboard">
+  <h2>📊 Live Human Rights Dashboard</h2>
+  
+  <!-- Stats Cards -->
+  <div class="stats">
+    <div class="stat-card" style="background: #ff6b6b;">
+      <h3>🚨 Active Complaints</h3>
+      <p id="activeComplaints">0</p>
+    </div>
+    <div class="stat-card" style="background: #4ecdc4;">
+      <h3>✅ Resolved Cases</h3>
+      <p id="resolvedCases">0</p>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div class="charts">
+    <div class="chart-container">
+      <canvas id="complaintsByType"></canvas> <!-- Pie Chart -->
+    </div>
+    <div class="chart-container">
+      <canvas id="complaintsByRegion"></canvas> <!-- Bar Chart -->
+    </div>
+  </div>
+  <div class="live-ticker">🚨 Live Update: <span id="ticker">A wage theft complaint was just reported in Mumbai!</span></div>
+</section>
+  </section>
+</body>
+</html>
